@@ -55,4 +55,4 @@ module Contextually
   end
 end
 
-Spec::Rails::Example::ControllerExampleGroup.send(:extend, Contextually::ExampleExtension) if defined?(Spec)
+RSpec::Rails::ControllerExampleGroup.send(:extend, Contextually::ExampleExtension) if defined?(Spec) rescue nil
